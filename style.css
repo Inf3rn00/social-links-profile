@@ -1,0 +1,99 @@
+* {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.attribution {
+  color: white;
+  margin-top: 10px;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color:  hsl(75, 94%, 57%);
+}
+
+body {
+  background: hsl(0, 0%, 8%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "inter";
+}
+
+main {
+  background-color: hsl(0, 0%, 12%);
+  width: 350px;
+  text-align: center;
+  border-radius: 10px;
+}
+
+.top {
+  padding: 20px;
+}
+
+.top h1 {
+  color: white;
+  font-weight: 500;
+  margin: 10px 0;
+}
+
+.location {
+  font-weight: 500;
+  color: hsl(75, 94%, 57%);
+  font-size: 14px;
+}
+
+.skills {
+  color: white;
+  font-size: 14px;
+  margin-top: 30px;
+}
+
+.icon-image {
+  display: flex;
+  justify-content: center;
+  margin: 20 px 0;
+}
+.icon-image img {
+  width: 100px;
+  border-radius: 50%;
+}
+
+.bottom {
+  padding: 20px;
+  margin-top: -20px;
+}
+
+.link-profile1,
+.link-profile2,
+.link-profile3,
+.link-profile4,
+.link-profile5 {
+  width: 100%;
+  background-color: hsl(0, 0%, 20%);
+  height: 50px; 
+  display: grid;
+  place-content: center;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  font-size: 14px;
+  margin: 10px 0;
+}
+
+.link-profile1:hover,
+.link-profile2:hover,
+.link-profile3:hover,
+.link-profile4:hover,
+.link-profile5:hover {
+  cursor: pointer;
+  color: hsl(0, 0%, 8%);
+  background-color: hsl(75, 94%, 57%);
+}
+
+a{
+  text-decoration: none;
+}
