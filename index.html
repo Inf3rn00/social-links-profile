@@ -31,17 +31,23 @@
             <img
               src="./assets/images/WhatsApp Image 2024-05-11 at 3.16.56 AM.jpeg"
               alt=""
+              data-testid="profilePicture"
             />
           </div>
-          <h1>Joshua E. Dodo</h1>
+          <h1 data-testid="fullName">Joshua E. Dodo</h1>
 
-          <p class="location">Kaduna, Nigeria</p>
+          <p class="location" data-testid="currentLocation">Kaduna, Nigeria</p>
 
-          <p class="skills">Front-End Developer | Inspired by Reading</p>
+          <p class="skills" data-testid="jobTitle">
+            Front-End Developer | Inspired by Reading
+          </p>
         </section>
-
         <section class="bottom">
-          <a href="https://github.com/Inf3rn00" target="_blank">
+          <a
+            href="https://github.com/Inf3rn00"
+            target="_blank"
+            data-testid="socialLinks"
+          >
             <div class="link-profile1">
               <span>GitHub</span>
             </div>
@@ -49,22 +55,35 @@
           <a
             href="https://www.frontendmentor.io/profile/Inf3rn00"
             target="_blank"
+            data-testid="socialLinks"
           >
             <div class="link-profile2">
               <span>Frontend Mentor</span>
             </div>
           </a>
-          <a href="https://www.linkedin.com/in/joshuadodo/" target="_blank">
+          <a
+            href="https://www.linkedin.com/in/joshuadodo/"
+            target="_blank"
+            data-testid="socialLinks"
+          >
             <div class="link-profile3">
               <span>LinkedIn</span>
             </div>
           </a>
-          <a href="https://twitter.com/_whoiselisha_" target="_blank">
+          <a
+            href="https://twitter.com/_whoiselisha_"
+            target="_blank"
+            data-testid="socialLinks"
+          >
             <div class="link-profile4">
               <span>Twitter</span>
             </div>
           </a>
-          <a href="https://www.instagram.com/_whoiselisha_/" target="_blank">
+          <a
+            href="https://www.instagram.com/_whoiselisha_/"
+            target="_blank"
+            data-testid="socialLinks"
+          >
             <div class="link-profile5">
               <span>Instagram</span>
             </div>
@@ -72,10 +91,29 @@
         </section>
       </main>
 
-      <!-- <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div> -->
+      <div class="attribution">
+        <a href="#" target="_blank" data-testid="emailAddress"
+          >dodojoshua72@gmail.com</a
+        >.
+        <p id="time" data-testid="currentTimeUTC">The current time is</p>
+      </div>
     </article>
   </body>
+  <script>
+    function updateTime() {
+      const now = new Date();
+
+      // Format the time as HH:MM:SS
+      const hours = String(now.getHours()).padStart(2, "0");
+      const minutes = String(now.getMinutes()).padStart(2, "0");
+      const seconds = String(now.getSeconds()).padStart(2, "0");
+      const timeString = `${hours}:${minutes}:${seconds}`;
+
+      document.getElementById("time").textContent = `The time is ${timeString}`;
+    }
+
+    updateTime();
+
+    setInterval(updateTime, 1000);
+  </script>
 </html>
